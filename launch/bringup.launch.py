@@ -20,7 +20,7 @@ def generate_launch_description():
     model_arg = DeclareLaunchArgument(
         'model',
         default_value='drone.urdf',
-        description='Name of the urdf file in the bringup/urdf directory'
+        description='Name of the urdf file in the midcone_bringup/urdf directory'
     )
 
     # 3. PX4 Device Port (Default /dev/ttyUSB0)
@@ -39,7 +39,7 @@ def generate_launch_description():
     )
 
     # --- URDF CONFIGURATION ---
-    pkg_share = FindPackageShare('bringup')
+    pkg_share = FindPackageShare('midcone_bringup')
     
     urdf_path = PathJoinSubstitution([
         pkg_share,
