@@ -27,7 +27,7 @@ def generate_launch_description():
     # --- URDF CONFIGURATION ---
     # 2. Dynamic Path Construction
     # Finds: install/bringup/share/bringup/urdf/<model_name>
-    pkg_share = FindPackageShare('bringup')
+    pkg_share = FindPackageShare('midcone_bringup')
     
     urdf_path = PathJoinSubstitution([
         pkg_share,
