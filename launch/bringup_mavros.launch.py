@@ -101,28 +101,36 @@ def generate_launch_description():
     # 5. RealSense Camera (Direct Node - Low Bandwidth Config)
     # Kept direct to prevent "Buffer Exceeded" crashes
     realsense_node = Node(
-        package='realsense2_camera',
-        executable='realsense2_camera_node',
-        name='camera',
-        namespace='camera',
-        output='screen',
-        parameters=[{
-            'camera_name': 'camera',
-            
-            # --- CRITICAL STABILITY SETTINGS ---
-            'global_time_enabled': False,
-            
-            # Low Res + Low FPS + No Infra = Stable on Drone
-            'depth_module.profile': '1280x720x10',
-            'rgb_camera.profile': '1280x720x10',
-            'enable_infra1': True,
-            'enable_infra2': True,
+    package='realsense2_camera',
+    executable='realsense2_camera_node',
+    name='camera',
+    namespace='camera',
+    output='screen',
+    parameters=[{
+        'camera_name': 'camera',
 
-            'pointcloud.enable': True,
-            'align_depth.enable': True
-        }]
-    )
+        'global_time_enabled': True, 
 
+        'depth_module.depth_profile': '1280x720x15',
+        'depth_module.infra_profile': '1280x720x15',
+        
+        # RGB
+        'rgb_camera.color_profile': '1280x720x15',
+
+        'enable_infra1': True,
+        'enable_infra2': True,
+        'enable_depth': True,
+        'enable_color': True,
+
+        # --- PROCESSING ---
+        'pointcloud.enable': True,
+        'align_depth.enable': True,
+        
+        # Optimization: Decimation filter reduces CPU load by downsampling depth 
+        # (useful if you want 720p FOV but don't need 720p density)
+        'decimation_filter.enable': False 
+    }]
+)
     return LaunchDescription([
         sim_time_arg,
         model_arg,
