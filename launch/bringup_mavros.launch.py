@@ -113,15 +113,13 @@ def generate_launch_description():
             'global_time_enabled': False,
             
             # Low Res + Low FPS + No Infra = Stable on Drone
-            'depth_module.profile': '640x480x15',
-            'rgb_camera.profile': '640x480x15',
-            'enable_infra1': False,
-            'enable_infra2': False,
+            'depth_module.profile': '1280x720x10',
+            'rgb_camera.profile': '1280x720x10',
+            'enable_infra1': True,
+            'enable_infra2': True,
 
             'pointcloud.enable': True,
-            'align_depth.enable': True,
-            'enable_theora': False,
-            'image_transport': 'raw' 
+            'align_depth.enable': True
         }]
     )
 
