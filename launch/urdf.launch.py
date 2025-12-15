@@ -17,7 +17,7 @@ def generate_launch_description():
         description='Use simulation (bag) time'
     )
     
-    # 'model': The filename input (Default: drone.urdf)
+    # 'model': The filename input (Default: handheld.urdf)
     model_arg = DeclareLaunchArgument(
         'model',
         default_value='handheld.urdf',
