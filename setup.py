@@ -30,7 +30,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'vio_bridge = midcone_rtabmap.vio_bridge:main',
+            'vio_bridge = midcone_bringup.vio_bridge:main',
         ],
     },
 )
