@@ -111,11 +111,11 @@ def generate_launch_description():
 
         'global_time_enabled': True, 
 
-        'depth_module.depth_profile': '1280x720x15',
-        'depth_module.infra_profile': '1280x720x15',
+        'depth_module.depth_profile': '640x480x30',
+        'depth_module.infra_profile': '640x480x30',
         
         # RGB
-        'rgb_camera.color_profile': '1280x720x15',
+        'rgb_camera.color_profile': '640x480x30',
 
         'enable_infra1': True,
         'enable_infra2': True,
