@@ -21,7 +21,7 @@ def generate_launch_description():
           'Odom/KalmanProcessNoise': '0.001', 
           'Odom/KalmanMeasurementNoise': '0.01',
           'Vis/FeatureType': '8',
-          'Vis/MaxFeatures': '750',
+          'Vis/MaxFeatures': '800',
           'Vis/MinInliers': '20',
           'GFTT/MinDistance': '10',
           }]
