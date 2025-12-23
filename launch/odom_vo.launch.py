@@ -61,5 +61,10 @@ def generate_launch_description():
             arguments=[LaunchConfiguration("args"), LaunchConfiguration("odom_args")],
             remappings=remappings
         ),
-
+        
+        Node(
+            package='midcone_rtabmap',
+            executable='vio_bridge',
+            output='screen'
+        ),
     ])
