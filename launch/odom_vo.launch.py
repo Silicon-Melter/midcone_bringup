@@ -15,7 +15,16 @@ def generate_launch_description():
           'subscribe_depth':True,
           'subscribe_odom_info':True,
           'approx_sync':True,
-          'wait_imu_to_init':True}]
+          'Odom/Strategy': '1',
+          'Reg/Force3DoF': 'False',
+          'Odom/KalmanUpdate': 'True', 
+          'Odom/KalmanProcessNoise': '0.001', 
+          'Odom/KalmanMeasurementNoise': '0.01',
+          'Vis/FeatureType': '8',
+          'Vis/MaxFeatures': '750',
+          'Vis/MinInliers': '20',
+          'GFTT/MinDistance': '10',
+          }]
 
     remappings=[
           ('imu', 'imu/data'),
