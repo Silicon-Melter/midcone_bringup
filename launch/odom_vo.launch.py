@@ -63,7 +63,7 @@ def generate_launch_description():
         ),
         
         Node(
-            package='midcone_rtabmap',
+            package='rtabmap_odom',
             executable='vio_bridge',
             output='screen'
         ),
