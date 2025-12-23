@@ -111,11 +111,11 @@ def generate_launch_description():
 
         'global_time_enabled': True, 
 
-        'depth_module.depth_profile': '640x480x30',
-        'depth_module.infra_profile': '640x480x30',
+        'depth_module.depth_profile': '640x360x30',
+        'depth_module.infra_profile': '640x360x30',
         
         # RGB
-        'rgb_camera.color_profile': '640x480x30',
+        'rgb_camera.color_profile': '640x360x30',
 
         'enable_infra1': True,
         'enable_infra2': True,
@@ -126,8 +126,6 @@ def generate_launch_description():
         'pointcloud.enable': True,
         'align_depth.enable': True,
         
-        # Optimization: Decimation filter reduces CPU load by downsampling depth 
-        # (useful if you want 720p FOV but don't need 720p density)
         'decimation_filter.enable': False 
     }]
 )
