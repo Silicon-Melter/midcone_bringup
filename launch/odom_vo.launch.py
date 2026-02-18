@@ -67,4 +67,10 @@ def generate_launch_description():
             executable='vio_bridge',
             output='screen'
         ),
+
+        Node(
+            package='midcone_bringup',
+            executable='lidar_bridge',
+            output='screen'
+        ),
     ])
