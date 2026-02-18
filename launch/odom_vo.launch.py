@@ -61,16 +61,4 @@ def generate_launch_description():
             arguments=[LaunchConfiguration("args"), LaunchConfiguration("odom_args")],
             remappings=remappings
         ),
-        
-        Node(
-            package='midcone_bringup',
-            executable='vio_bridge',
-            output='screen'
-        ),
-
-        Node(
-            package='midcone_bringup',
-            executable='lidar_bridge',
-            output='screen'
-        ),
     ])
