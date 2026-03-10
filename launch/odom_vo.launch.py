@@ -54,6 +54,12 @@ def generate_launch_description():
             description='Extra args for odometry node.'),
 
         Node(
+            package='midcone_bringup',
+            executable='vio_bridge',
+            output='screen'
+        ),
+        
+        Node(
             package='rtabmap_odom', 
             executable='rgbd_odometry', 
             output='screen',

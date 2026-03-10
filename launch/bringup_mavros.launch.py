@@ -140,15 +140,4 @@ def generate_launch_description():
         mavros_node,
         rplidar_node,
         realsense_node,
-        Node(
-            package='midcone_bringup',
-            executable='vio_bridge',
-            output='screen'
-        ),
-
-        Node(
-            package='midcone_bringup',
-            executable='lidar_bridge',
-            output='screen'
-        ),
     ])
